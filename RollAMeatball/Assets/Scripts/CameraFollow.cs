@@ -5,15 +5,19 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
 
-    public Transform followTarget1; //Referencia al objeto que tiene que seguir la cámara
+    [Header("Enfoques")]
+    public Transform followTarget1;
     public Transform followTarget2;
+
+    [Header("Separación")]
     public Vector3 offset; //Variable para almacenar la diferencia vectorial entre cámara y objetivo.
 
     void Start()
     {
+        transform.position = offset + (followTarget1.position + followTarget2.position) / 2;
         //El vector comparativo entre dos posiciones surge de:
         //Vector del objetivo - vector original (en este caso, la cámara)
-        offset = followTarget1.position - transform.position;
+        offset = (followTarget1.position + followTarget2.position) / 2 - transform.position;
     }
 
     void LateUpdate()
@@ -24,7 +28,7 @@ public class CameraFollow : MonoBehaviour
 
     void Follower()
     {
-        transform.position = followTarget1.position - offset; //La posición de la cámara = posicion del objeto
+        transform.position = (followTarget1.position + followTarget2.position) / 2 - offset; //La posición de la cámara = posicion del objeto
     }
 }
 
