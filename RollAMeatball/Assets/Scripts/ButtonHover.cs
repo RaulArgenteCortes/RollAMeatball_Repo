@@ -5,7 +5,7 @@ public class ButtonHoverEffect : MonoBehaviour, IPointerEnterHandler, IPointerEx
 {
     private Vector3 originalScale;
     private Vector3 targetScale;
-    private bool isHovering = false;
+    //private bool isHovering = false;
 
     [SerializeField] private float scaleFactor = 1.2f; // Tamaño cuando pasa el mouse
     [SerializeField] private float smoothSpeed = 5f;  // Velocidad de la transición
@@ -27,13 +27,13 @@ public class ButtonHoverEffect : MonoBehaviour, IPointerEnterHandler, IPointerEx
     {
         // Cambia el tamaño objetivo al tamaño aumentado
         targetScale = originalScale * scaleFactor;
-        isHovering = true;
+        //isHovering = true;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         // Vuelve el tamaño objetivo al tamaño original
         targetScale = originalScale;
-        isHovering = false;
+        //isHovering = false;
     }
 }
