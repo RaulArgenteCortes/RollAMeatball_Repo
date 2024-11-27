@@ -14,18 +14,18 @@ public class MovementController : MonoBehaviour
     void Update()
     {
         //A is for Onwards (The reason is the camera orientation)
-                    transform.Translate(Vector3.left * Time.deltaTime * playerMovement );
+                    transform.Translate(Vector3.right * Time.deltaTime * playerMovement );
         
         //D is for Backwards (Same reason as before)
         //transform.Translate(Vector3.left * playerFallSpeed);
 
         //Move to the side
         if (Input.GetKey(KeyCode.A)) {
-            transform.Translate(Vector3.back * Time.deltaTime * playerMovement );
+            transform.Translate(Vector3.forward * Time.deltaTime * playerMovement );
         }
         if (Input.GetKey(KeyCode.D))
         {
-            transform.Translate(Vector3.forward * Time.deltaTime * playerMovement);
+            transform.Translate(Vector3.back * Time.deltaTime * playerMovement);
         }
        
     }
