@@ -28,5 +28,6 @@ public class MovementController : MonoBehaviour
             transform.Translate(Vector3.back * Time.deltaTime * playerMovement);
         }
        
+
     }
 }
