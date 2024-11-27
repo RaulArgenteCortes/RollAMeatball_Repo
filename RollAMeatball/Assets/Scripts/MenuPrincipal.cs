@@ -5,10 +5,10 @@ public class MenuPrincipal : MonoBehaviour
 {
     public GameObject panelInstrucciones; // Referencia al Panel de Instrucciones
 
-    public void IniciarJuego()
+    public void LevelSelector()
     {
-        // Carga la escena del juego
-        SceneManager.LoadScene("Level1");
+        // el selector de niveles
+        SceneManager.LoadScene("LevelSelector");
     }
 
     public void MostrarInstrucciones()

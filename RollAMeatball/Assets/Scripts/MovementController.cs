@@ -9,7 +9,7 @@ public class MovementController : MonoBehaviour
     //This wouldn't be possible without the videos from DIGICANMEDIA(his channel: https://www.youtube.com/@CSHCPhotographyJRogowy) and various web posts and blogs. Also the work from the entire team.
     public float playerFallSpeed = 1.5f;
     public float playerMovement = 2.50f;
-    public Respawn respawn;
+  
     // Update is called once per frame
     void Update()
     {
@@ -29,12 +29,6 @@ public class MovementController : MonoBehaviour
         }
        
 
-    }
-    private void OnTriggerEnter(Collider other)
-    {   if (other.gameObject.CompareTag("Obstacle"))
-        {
-            Respawn.Dead();
-        }
     }
 
 }
