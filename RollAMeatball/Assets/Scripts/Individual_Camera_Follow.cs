@@ -14,7 +14,6 @@ public class Individual_Camera_Follow : MonoBehaviour
     void Start()
     {
         offset = player.transform.position - transform.position;
-          
     }
 
     // Update is called once per frame
