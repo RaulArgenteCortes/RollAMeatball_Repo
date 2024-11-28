@@ -16,7 +16,9 @@ public class CollisionDeath : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Obstacle")) {
             //Debug.Log("Collision with an Obstacle");
-            SceneManager.LoadScene(2);
+            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+            //SceneManager.LoadScene(2);
+            SceneManager.LoadScene(currentSceneIndex);
         }
     }
     private void OnTriggerEnter(Collider other)

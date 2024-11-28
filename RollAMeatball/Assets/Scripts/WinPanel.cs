@@ -37,7 +37,9 @@ public class PanelVictoria : MonoBehaviour
     public void SiguienteNivel()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Level3");
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex + 1);
+        //SceneManager.LoadScene("Level3");
     }
 
 
