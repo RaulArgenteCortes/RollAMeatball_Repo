@@ -722,7 +722,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Congratulations! \nyou've now become the best meatball "
+  m_text: "Congratulations! \nyou've now become the best meatball!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 35ce5848de5b9e841a8a591b0a434179, type: 2}
   m_sharedMaterial: {fileID: -2461373156174734844, guid: 35ce5848de5b9e841a8a591b0a434179,
